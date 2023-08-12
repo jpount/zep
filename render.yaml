@@ -5,6 +5,7 @@ services:
     autoDeploy: false
     env: image
     plan: free
+    region: singapore
     image:
       url: ghcr.io/getzep/zep-cloud:latest
     healthCheckPath: /healthz
@@ -24,6 +25,7 @@ services:
         sync: false
   - type: pserv
     name: zep-nlp
+    region: singapore
     autoDeploy: false
     env: image
     image:
@@ -32,6 +34,7 @@ services:
 databases:
   - name: zep-postgres
     databaseName: zep
+    region: singapore
     postgresMajorVersion: 15
     ipAllowList: [] # only allow internal connections
     plan: free
