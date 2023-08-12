@@ -4,6 +4,7 @@ services:
     name: zep
     autoDeploy: false
     env: image
+    plan: free
     image:
       url: ghcr.io/getzep/zep-cloud:latest
     healthCheckPath: /healthz
@@ -33,3 +34,4 @@ databases:
     databaseName: zep
     postgresMajorVersion: 15
     ipAllowList: [] # only allow internal connections
+    plan: free
